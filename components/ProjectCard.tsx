@@ -16,7 +16,7 @@ const ProjectCard = ({ title, desc, tech, github, live }: ProjectProps) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-  const currentCard = cardRef.current; // ✅ Cache the value
+  const currentCard = cardRef.current; 
 
   const observer = new IntersectionObserver(
     ([entry]) => {
@@ -28,7 +28,7 @@ const ProjectCard = ({ title, desc, tech, github, live }: ProjectProps) => {
   if (currentCard) observer.observe(currentCard);
 
   return () => {
-    if (currentCard) observer.unobserve(currentCard); // ✅ Use cached value
+    if (currentCard) observer.unobserve(currentCard); 
   };
 }, []);
 
