@@ -16,17 +16,21 @@ const ProjectCard = ({ title, desc, tech, github, live }: ProjectProps) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-      },
-      { threshold: 0.1 }
-    );
-    if (cardRef.current) observer.observe(cardRef.current);
-    return () => {
-      if (cardRef.current) observer.unobserve(cardRef.current);
-    };
-  }, []);
+  const currentCard = cardRef.current; // ✅ Cache the value
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) setVisible(true);
+    },
+    { threshold: 0.1 }
+  );
+
+  if (currentCard) observer.observe(currentCard);
+
+  return () => {
+    if (currentCard) observer.unobserve(currentCard); // ✅ Use cached value
+  };
+}, []);
 
   return (
     <div
