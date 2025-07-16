@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaViacoin } from "react-icons/fa";
 
 const Navbar = () => {
   const scrollTo = (id: string) => {
@@ -32,6 +32,9 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <a href="https://github.com/ChinmayLokahnde" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
           <FaGithub size={20} />
+        </a>
+        <a href="https://www.instagram.com/chinmayylokhande/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+          <FaInstagram size={20}/>
         </a>
         <a href="https://www.linkedin.com/in/chinmay-lokhande-6b6b08297/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
           <FaLinkedin size={20} />
