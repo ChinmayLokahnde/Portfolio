@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaInstagram, FaLinkedin, FaViacoin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin,} from "react-icons/fa";
 
 const Navbar = () => {
   const scrollTo = (id: string) => {
