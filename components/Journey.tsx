@@ -75,7 +75,6 @@ const Journey = () => {
         / my journey
       </motion.h2>
 
-      {/* Modern grid layout */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {journey.map((step, i) => (
           <motion.div
