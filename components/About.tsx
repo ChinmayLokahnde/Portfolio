@@ -68,7 +68,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
            className="mt-8 text-xl text-gray-400 font-sans"
           >
-            Outside of work, I’m also a <span className=" text-white font-medium">professional video editor</span> with experience in crafting cinematic edits, 3D environment with After Effect, and content for social media (Youtube).
+            Outside of work, I'm also a <span className=" text-white font-medium">professional video editor</span> with experience in crafting cinematic edits, 3D environment with After Effect, and content for social media (Youtube).
           </motion.div>
 
         </motion.div>
@@ -82,7 +82,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <Image
-            src="/profile2.JPG"
+            src="/profile3.JPG"
             alt="Chinmay's photo"
             width={250}
             height={250}
