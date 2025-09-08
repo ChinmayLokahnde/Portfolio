@@ -64,7 +64,7 @@ const journey = [
 
 const Journey = () => {
   return (
-    <section id="journey" className="px-6 py-20 max-w-6xl mx-auto text-white">
+    <section id="journey" className="px-6 py-20 max-w-7xl mx-auto text-white">
       <motion.h2
         className="text-3xl font-bold text-teal-400 mb-16 text-center"
         initial={{ opacity: 0, y: 40 }}
@@ -75,33 +75,30 @@ const Journey = () => {
         / my journey
       </motion.h2>
 
-      <div className="relative border-l-2 border-teal-500/30 pl-8 space-y-12">
+      {/* Modern grid layout */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {journey.map((step, i) => (
           <motion.div
             key={i}
-            className="relative"
-            initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="bg-gray-900/60 border border-teal-500/30 rounded-2xl p-6 shadow-lg hover:shadow-teal-500/40 hover:-translate-y-1 transition-all backdrop-blur-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
           >
-            
-            <span className="absolute -left-4 top-2 w-6 h-6 rounded-full bg-teal-500 border-4 border-gray-900 shadow-lg shadow-teal-500/50"></span>
-
-            <div className="bg-gray-900/60 backdrop-blur-md border border-teal-500/30 rounded-2xl p-6 shadow-lg hover:shadow-teal-500/30 transition-all">
-              <h3 className="text-xl font-semibold text-teal-300">{step.title}</h3>
-              <p className="text-sm text-gray-400 mb-3">{step.period}</p>
-              <ul className="list-disc list-inside text-gray-300 space-y-1">
-                {step.points.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-lg font-semibold text-teal-300">{step.title}</h3>
+              <span className="text-xs px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full">
+                {step.period}
+              </span>
             </div>
+            <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm">
+              {step.points.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
           </motion.div>
         ))}
-
-        
-        <div className="absolute left-0 top-0 w-1 bg-gradient-to-b from-teal-500 via-teal-400/50 to-transparent animate-pulse rounded-full"></div>
       </div>
     </section>
   );
