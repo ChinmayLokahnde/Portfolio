@@ -62,16 +62,16 @@ const About = () => {
             ))}
           </motion.ul>
           <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, delay: 0.2 }}
-  className="mt-8 text-xl text-gray-400 font-sans"
->
-  Outside of work, I&apos;m also a <span className=" text-white font-medium">professional video editor</span> 
-  with experience in crafting cinematic edits, 3D environment with After Effect, 
-  and content for social media (Youtube).
-</motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-8 text-xl text-gray-400 font-sans"
+         >
+          Outside of work, I&apos;m also a <span className=" text-white font-medium">professional video editor</span> 
+          with experience in crafting cinematic edits, 3D environment with After Effect, 
+          and content for social media (Youtube).
+         </motion.div>
 
 
         </motion.div>
@@ -89,7 +89,7 @@ const About = () => {
             alt="Chinmay's photo"
             width={250}
             height={250}
-            className="rounded-b-sm object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+            className="rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
         </motion.div>
       </div>
