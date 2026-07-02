@@ -4,6 +4,15 @@ import { motion } from 'framer-motion';
 
 const journey = [
   {
+    title: 'AI Automation Platform',
+    period: 'Early 2026',
+    points: [
+      'Designed an n8n-inspired workflow automation platform from scratch',
+      'Developed a scalable execution engine with webhooks, HTTP actions, and conditional logic',
+      'Integrated AI-powered nodes and backend services using Node.js, MongoDB, Redis, and BullMQ',
+    ],
+  },
+  {
     title: 'EVU Internship (Remote, New York, US)',
     period: 'Mid 2025',
     points: [

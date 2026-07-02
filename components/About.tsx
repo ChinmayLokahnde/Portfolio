@@ -85,11 +85,11 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <Image
-            src="/profile3.JPG"
+            src="/profile4.jpeg"
             alt="Chinmay's photo"
-            width={250}
-            height={250}
-            className="rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+            width={350}
+            height={500}
+            className="rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           />
         </motion.div>
       </div>
